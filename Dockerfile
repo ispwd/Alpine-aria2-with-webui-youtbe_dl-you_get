@@ -14,7 +14,7 @@ RUN apk update && \
     apk del git && \
 	apk add --no-cache --update darkhttpd && \
     apk add --no-cache python3 && \
-    pip3 install --no-cache-dir --upgrade --update you-get && \
+    pip3 install --no-cache-dir --upgrade you-get && \
     apk add --no-cache --update youtube-dl && \
     apk add --no-cache --update ffmpeg
     
