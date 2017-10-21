@@ -14,9 +14,10 @@ RUN apk update && \
     apk del git && \
 	apk add --update darkhttpd && \
     apk add python3 && \
-    apk add youtube_dl &&\
-    apk add ffmpeg &&\
-    pip3 install --upgrade you-get
+    pip3 install --upgrade you-get && \
+    apk add youtube_dl && \
+    apk add ffmpeg
+    
 
 ADD files/start.sh /aria2/conf-copy/start.sh
 ADD files/aria2.conf /aria2/conf-copy/aria2.conf
