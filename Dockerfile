@@ -8,15 +8,15 @@ RUN apk update && \
 	mkdir -p /aria2/conf-copy && \
 	mkdir -p /aria2/data && \
 	apk add --no-cache --update aria2 && \
-	apk add git && \
+	apk add --no-cache --update git && \
 	git clone https://github.com/ziahamza/webui-aria2 /aria2/aria2-webui && \
     rm /aria2/aria2-webui/.git* -rf && \
     apk del git && \
-	apk add --update darkhttpd && \
-    apk add python3 && \
-    pip3 install --upgrade you-get && \
-    apk add youtube-dl && \
-    apk add ffmpeg
+	apk add --no-cache --update darkhttpd && \
+    apk add --no-cache python3 && \
+    pip3 install --no-cache-dir --upgrade --update you-get && \
+    apk add --no-cache --update youtube-dl && \
+    apk add --no-cache --update ffmpeg
     
 
 ADD files/start.sh /aria2/conf-copy/start.sh
